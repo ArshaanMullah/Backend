@@ -1,9 +1,9 @@
 require('dotenv').config()
-const express = require("express");
-const app = express();
+const express = require("express")
+const app = express()
 const bodyParser = require('body-parser')
 const router = require('./router/auth-router')
-const port = 8080;
+const port = 8080
 
 app.use(bodyParser.urlencoded({extended : true}))
 
@@ -16,3 +16,4 @@ app.get('/', (req, res) => {
 app.listen(process.env.PORT, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
